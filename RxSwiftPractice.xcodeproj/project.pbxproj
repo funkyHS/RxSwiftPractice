@@ -43,7 +43,7 @@
 		378B7DF621EF103000F855F4 /* MusicListViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewModel2.swift; sourceTree = "<group>"; };
 		378B7DF821EF10AB00F855F4 /* FunkyViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunkyViewController2.swift; sourceTree = "<group>"; };
 		378B7DF921EF10AB00F855F4 /* FunkyViewController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FunkyViewController2.xib; sourceTree = "<group>"; };
-		378B7DFD21EF1F6100F855F4 /* Observable可监听序列.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Observable可监听序列.md"; sourceTree = "<group>"; };
+		378B7DFD21EF1F6100F855F4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		37C46E4A21F727BE000151EA /* Observer观察者.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Observer观察者.md"; sourceTree = "<group>"; };
 		86DFF25CEB12330D27042A28 /* Pods-RxSwiftPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPractice.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftPractice/Pods-RxSwiftPractice.release.xcconfig"; sourceTree = "<group>"; };
 		CACD9DB7F54117B9BC60D7EE /* Pods-RxSwiftPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftPractice/Pods-RxSwiftPractice.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +118,7 @@
 				378B7DD921EF08FD00F855F4 /* AppDelegate.swift */,
 				378B7DDB21EF08FD00F855F4 /* ViewController.swift */,
 				375312B12203D18B00DA5EFD /* LabelViewController.swift */,
+				37E0C43F24A82F9C00056166 /* 7.条件和布尔操作符 */,
 				375312A72203008E00DA5EFD /* 7.错误处理 */,
 				375312A42202E53300DA5EFD /* 6.过滤操作符 */,
 				37174256220074C200BB1CAC /* 5.变换操作符 */,
@@ -166,7 +167,7 @@
 		378B7DFC21EF14B700F855F4 /* 2.Observable介绍、创建可观察序列 */ = {
 			isa = PBXGroup;
 			children = (
-				378B7DFD21EF1F6100F855F4 /* Observable可监听序列.md */,
+				378B7DFD21EF1F6100F855F4 /* README.md */,
 			);
 			path = "2.Observable介绍、创建可观察序列";
 			sourceTree = "<group>";
@@ -177,6 +178,13 @@
 				37C46E4A21F727BE000151EA /* Observer观察者.md */,
 			);
 			path = "3.Observer观察者";
+			sourceTree = "<group>";
+		};
+		37E0C43F24A82F9C00056166 /* 7.条件和布尔操作符 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "7.条件和布尔操作符";
 			sourceTree = "<group>";
 		};
 		8E1B27AA4201EB9357E3873D /* Pods */ = {
