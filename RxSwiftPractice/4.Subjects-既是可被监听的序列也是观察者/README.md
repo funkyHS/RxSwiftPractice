@@ -7,11 +7,27 @@
 
 ### 1. Subjects 基本介绍
 
-#### Subjects 既是订阅者，也是 Observable：
--  Subjects 既是订阅者，也是 Observable：说它是订阅者，是因为它能够动态地接收新的值。说它又是一个 Observable，是因为当 Subjects 有了新的值之后，就会通过 Event 将新值发出给他的所有订阅者。
+#### Subjects 既是订阅者，也是 Observable
+-  说它是订阅者，是因为它能够动态地接收新的值。说它又是一个 Observable，是因为当 Subjects 有了新的值之后，就会通过 Event 将新值发出给他的所有订阅者。
+- 例如：textField的当前文本。它可以看成是由用户输入，而产生的一个文本序列。也可以是由外部文本序列，来控制当前显示内容的观察者
+```Swift
+    // 作为可被监听的序列
+    let observable = textField.rx.text
+    observable.subscribe(onNext: { text in show(text: text) })
+```
 
-#### 一共有四种Subjects
-- 分别为：PublishSubject、BehaviorSubject、ReplaySubject、Variable。他们之间既有各自的特点，也有相同之处
+```Swift
+    // 作为观察者
+    let observer = textField.rx.text
+    let text: Observable<String?> = ...
+    text.bind(to: observer)
+```
+- 有许多 UI 控件都存在这种特性，例如：switch的开关状态，segmentedControl的选中索引号，datePicker的选中日期等等。
+
+
+
+#### 框架中的五种Subjects
+- 分别为：AsyncSubject、PublishSubject、BehaviorSubject、ReplaySubject、ControlProperty、Variable。他们之间既有各自的特点，也有相同之处
     - 首先他们都是 Observable，他们的订阅者都能收到他们发出的新的 Event。
     - 直到 Subject 发出 .complete 或者 .error 的 Event 后，该 Subject 便终结了，同时它也就不会再发出 .next 事件。
     - 对于那些在 Subject 终结后再订阅他的订阅者，也能收到 subject 发出的一条 .complete 或 .error 的 event，告诉这个新的订阅者它已经终结了。
@@ -24,7 +40,32 @@
 
 
 
-### 2. PublishSubject
+### 2. AsyncSubject
+- `AsyncSubject` 将在源 Observable 产生完成事件后，发出最后一个元素（仅仅只有最后一个元素）
+- 如果源 Observable 没有发出任何元素，只有一个完成事件。那 AsyncSubject 也只有一个完成事件
+- 如果源 Observable 因为产生了一个 error 事件而中止， AsyncSubject 就不会发出任何元素，而是将这个 error 事件发送出来
+```Swift
+    let disposeBag = DisposeBag()
+    let subject = AsyncSubject<String>()
+
+    subject
+      .subscribe { print("Subscription: 1 Event:", $0) }
+      .disposed(by: disposeBag)
+
+    subject.onNext("1")
+    subject.onNext("2")
+    subject.onNext("3")
+    subject.onCompleted()
+    
+    /**
+    运行结果：
+        Subscription: 1 Event: next("3")
+        Subscription: 1 Event: completed    
+    */
+```
+
+
+### 3. PublishSubject
 
 - `PublishSubject` 是最普通的 Subject，它不需要初始值就能创建。PublishSubject 的订阅者从他们开始订阅的时间点起，可以收到订阅后 Subject 发出的新 Event，而`不会收到他们在订阅前已发出的 Event`。
 ```Swift
@@ -85,9 +126,11 @@
 ```
 
 
-### 3. BehaviorSubject
+### 4. BehaviorSubject
 
-- `BehaviorSubject` 需要通过一个默认初始值来创建。当一个订阅者来订阅它的时候，这个订阅者会立即`收到 BehaviorSubjects 上一个发出的 event`。之后就跟正常的情况一样，它也会接收到 BehaviorSubject 之后发出的新的 event。
+- `BehaviorSubject` 需要通过一个默认初始值来创建。
+- 当一个观察者来订阅它的时候，这个观察者会立即`收到 BehaviorSubjects 上一个发出的 event`。如果不存在最新的元素，就发出默认元素。
+- 每当产生新的元素，都会发送给观察者。
 ```Swift
     let disposeBag = DisposeBag()
 
@@ -120,13 +163,16 @@
     */
 ```
 
-### 4. ReplaySubject
+### 5. ReplaySubject
 
 - `ReplaySubject` 在创建时候需要设置一个 `bufferSize`，表示它对于它发送过的 event 的缓存个数。比如一个 ReplaySubject 的 bufferSize 设置为 2，它发出了 3 个 .next 的 event，那么它会将后两个（最近的两个）event 给缓存起来。此时如果有一个 subscriber 订阅了这个 ReplaySubject，那么这个 subscriber 就会立即收到前面缓存的两个 .next 的 event。
 - 如果一个 subscriber 订阅已经结束的 ReplaySubject，除了会收到缓存的 .next 的 event 外，还会收到那个终结的 .error 或者 .complete 的 event。
 ```Swift
     let disposeBag = DisposeBag()
 
+    // 缓存所有已产生的元素
+    // let subject = ReplaySubject<String>.createUnbounded()
+    
     // 创建一个bufferSize为2的ReplaySubject
     let subject = ReplaySubject<String>.create(bufferSize: 2)
 
@@ -173,8 +219,13 @@
     */
 ```
 
+### 6. ControlProperty
+- `ControlProperty` 专门用于描述 UI 控件属性的，它不会产生 error 事件
+- 一定在 MainScheduler 订阅（主线程订阅），一定在 MainScheduler 监听（主线程监听）
+- 共享状态变化
 
-### 5. BehaviorRelay
+
+### 7. BehaviorRelay
 
 - `BehaviorRelay` 是作为 Variable 的替代者出现的。它的本质其实也是对 BehaviorSubject 的封装，所以它也必须要通过一个默认的初始值进行创建。
 - BehaviorRelay 具有 BehaviorSubject 的功能，能够向它的订阅者发出上一个 event 以及之后新创建的 event。

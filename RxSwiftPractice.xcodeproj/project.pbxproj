@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		375312B22203D18B00DA5EFD /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375312B12203D18B00DA5EFD /* LabelViewController.swift */; };
+		3789B64F24C595380006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B64E24C595380006BFA2 /* README.md */; };
+		3789B65324C5C11F0006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B65224C5C11F0006BFA2 /* README.md */; };
+		3789B65624C5CCA20006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B65524C5CCA20006BFA2 /* README.md */; };
+		3789B65E24C5D0CE0006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B65D24C5D0CE0006BFA2 /* README.md */; };
+		3789B66024C5D0D70006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B65F24C5D0D70006BFA2 /* README.md */; };
+		3789B66224C5D0E00006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B66124C5D0E00006BFA2 /* README.md */; };
+		3789B66424C5D0E80006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B66324C5D0E80006BFA2 /* README.md */; };
+		3789B66624C5D0F20006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B66524C5D0F20006BFA2 /* README.md */; };
+		3789B66824C5D0FB0006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B66724C5D0FB0006BFA2 /* README.md */; };
+		3789B66A24C5D1080006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B66924C5D1080006BFA2 /* README.md */; };
+		3789B66C24C5D1120006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B66B24C5D1120006BFA2 /* README.md */; };
 		378B7DDA21EF08FD00F855F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B7DD921EF08FD00F855F4 /* AppDelegate.swift */; };
 		378B7DDC21EF08FD00F855F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B7DDB21EF08FD00F855F4 /* ViewController.swift */; };
 		378B7DDF21EF08FD00F855F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378B7DDD21EF08FD00F855F4 /* Main.storyboard */; };
@@ -24,11 +35,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3717424221FF0E0B00BB1CAC /* Subjects使用.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Subjects使用.md"; sourceTree = "<group>"; };
-		37174257220074F800BB1CAC /* 变换操作符.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "变换操作符.md"; sourceTree = "<group>"; };
-		375312A52202E55D00DA5EFD /* 过滤操作符.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "过滤操作符.md"; sourceTree = "<group>"; };
-		375312A8220300DA00DA5EFD /* 错误处理.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "错误处理.md"; sourceTree = "<group>"; };
+		3717424221FF0E0B00BB1CAC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		37174257220074F800BB1CAC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		375312A52202E55D00DA5EFD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		375312A8220300DA00DA5EFD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		375312B12203D18B00DA5EFD /* LabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
+		3789B64E24C595380006BFA2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3789B65224C5C11F0006BFA2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3789B65524C5CCA20006BFA2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3789B65D24C5D0CE0006BFA2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3789B65F24C5D0D70006BFA2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3789B66124C5D0E00006BFA2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3789B66324C5D0E80006BFA2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3789B66524C5D0F20006BFA2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3789B66724C5D0FB0006BFA2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3789B66924C5D1080006BFA2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3789B66B24C5D1120006BFA2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		378B7DD621EF08FD00F855F4 /* RxSwiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		378B7DD921EF08FD00F855F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		378B7DDB21EF08FD00F855F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,7 +66,7 @@
 		378B7DF821EF10AB00F855F4 /* FunkyViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunkyViewController2.swift; sourceTree = "<group>"; };
 		378B7DF921EF10AB00F855F4 /* FunkyViewController2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FunkyViewController2.xib; sourceTree = "<group>"; };
 		378B7DFD21EF1F6100F855F4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		37C46E4A21F727BE000151EA /* Observer观察者.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Observer观察者.md"; sourceTree = "<group>"; };
+		37C46E4A21F727BE000151EA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		86DFF25CEB12330D27042A28 /* Pods-RxSwiftPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPractice.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftPractice/Pods-RxSwiftPractice.release.xcconfig"; sourceTree = "<group>"; };
 		CACD9DB7F54117B9BC60D7EE /* Pods-RxSwiftPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftPractice/Pods-RxSwiftPractice.debug.xcconfig"; sourceTree = "<group>"; };
 		D4A3956EE2ED1845D8CB4A0C /* Pods_RxSwiftPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,36 +84,126 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3717424121FF0DD200BB1CAC /* 4.Subjects */ = {
+		3717424121FF0DD200BB1CAC /* 4.Subjects-既是可被监听的序列也是观察者 */ = {
 			isa = PBXGroup;
 			children = (
-				3717424221FF0E0B00BB1CAC /* Subjects使用.md */,
+				3717424221FF0E0B00BB1CAC /* README.md */,
 			);
-			path = 4.Subjects;
+			path = "4.Subjects-既是可被监听的序列也是观察者";
 			sourceTree = "<group>";
 		};
-		37174256220074C200BB1CAC /* 5.变换操作符 */ = {
+		37174256220074C200BB1CAC /* 变换操作符 */ = {
 			isa = PBXGroup;
 			children = (
-				37174257220074F800BB1CAC /* 变换操作符.md */,
+				37174257220074F800BB1CAC /* README.md */,
 			);
-			path = "5.变换操作符";
+			path = "变换操作符";
 			sourceTree = "<group>";
 		};
-		375312A42202E53300DA5EFD /* 6.过滤操作符 */ = {
+		375312A42202E53300DA5EFD /* 过滤操作符 */ = {
 			isa = PBXGroup;
 			children = (
-				375312A52202E55D00DA5EFD /* 过滤操作符.md */,
+				375312A52202E55D00DA5EFD /* README.md */,
 			);
-			path = "6.过滤操作符";
+			path = "过滤操作符";
 			sourceTree = "<group>";
 		};
-		375312A72203008E00DA5EFD /* 7.错误处理 */ = {
+		375312A72203008E00DA5EFD /* 6.Error Handling-错误处理 */ = {
 			isa = PBXGroup;
 			children = (
-				375312A8220300DA00DA5EFD /* 错误处理.md */,
+				375312A8220300DA00DA5EFD /* README.md */,
 			);
-			path = "7.错误处理";
+			path = "6.Error Handling-错误处理";
+			sourceTree = "<group>";
+		};
+		3789B64D24C594D40006BFA2 /* 5.Disposable-可被清除的资源 */ = {
+			isa = PBXGroup;
+			children = (
+				3789B64E24C595380006BFA2 /* README.md */,
+			);
+			path = "5.Disposable-可被清除的资源";
+			sourceTree = "<group>";
+		};
+		3789B65024C595B10006BFA2 /* 8.Operator-操作符 */ = {
+			isa = PBXGroup;
+			children = (
+				3789B65C24C5D0A90006BFA2 /* Using操作符 */,
+				3789B65B24C5D0A00006BFA2 /* Materialize操作符 */,
+				3789B65A24C5D08C0006BFA2 /* Time操作符 */,
+				3789B65924C5D0830006BFA2 /* 连接Observable操作符 */,
+				3789B65824C5D07A0006BFA2 /* 数学和聚合操作符 */,
+				3789B65724C5D06D0006BFA2 /* 联合操作符 */,
+				3789B65424C5CC910006BFA2 /* Debug操作符 */,
+				37E0C43F24A82F9C00056166 /* 条件和布尔操作符 */,
+				375312A42202E53300DA5EFD /* 过滤操作符 */,
+				37174256220074C200BB1CAC /* 变换操作符 */,
+				3789B65524C5CCA20006BFA2 /* README.md */,
+			);
+			path = "8.Operator-操作符";
+			sourceTree = "<group>";
+		};
+		3789B65124C5BB800006BFA2 /* 7.Schedulers-调度器 */ = {
+			isa = PBXGroup;
+			children = (
+				3789B65224C5C11F0006BFA2 /* README.md */,
+			);
+			path = "7.Schedulers-调度器";
+			sourceTree = "<group>";
+		};
+		3789B65424C5CC910006BFA2 /* Debug操作符 */ = {
+			isa = PBXGroup;
+			children = (
+				3789B66924C5D1080006BFA2 /* README.md */,
+			);
+			path = "Debug操作符";
+			sourceTree = "<group>";
+		};
+		3789B65724C5D06D0006BFA2 /* 联合操作符 */ = {
+			isa = PBXGroup;
+			children = (
+				3789B66724C5D0FB0006BFA2 /* README.md */,
+			);
+			path = "联合操作符";
+			sourceTree = "<group>";
+		};
+		3789B65824C5D07A0006BFA2 /* 数学和聚合操作符 */ = {
+			isa = PBXGroup;
+			children = (
+				3789B66524C5D0F20006BFA2 /* README.md */,
+			);
+			path = "数学和聚合操作符";
+			sourceTree = "<group>";
+		};
+		3789B65924C5D0830006BFA2 /* 连接Observable操作符 */ = {
+			isa = PBXGroup;
+			children = (
+				3789B66324C5D0E80006BFA2 /* README.md */,
+			);
+			path = "连接Observable操作符";
+			sourceTree = "<group>";
+		};
+		3789B65A24C5D08C0006BFA2 /* Time操作符 */ = {
+			isa = PBXGroup;
+			children = (
+				3789B66124C5D0E00006BFA2 /* README.md */,
+			);
+			path = "Time操作符";
+			sourceTree = "<group>";
+		};
+		3789B65B24C5D0A00006BFA2 /* Materialize操作符 */ = {
+			isa = PBXGroup;
+			children = (
+				3789B65F24C5D0D70006BFA2 /* README.md */,
+			);
+			path = "Materialize操作符";
+			sourceTree = "<group>";
+		};
+		3789B65C24C5D0A90006BFA2 /* Using操作符 */ = {
+			isa = PBXGroup;
+			children = (
+				3789B65D24C5D0CE0006BFA2 /* README.md */,
+			);
+			path = "Using操作符";
 			sourceTree = "<group>";
 		};
 		378B7DCD21EF08FD00F855F4 = {
@@ -118,13 +230,13 @@
 				378B7DD921EF08FD00F855F4 /* AppDelegate.swift */,
 				378B7DDB21EF08FD00F855F4 /* ViewController.swift */,
 				375312B12203D18B00DA5EFD /* LabelViewController.swift */,
-				37E0C43F24A82F9C00056166 /* 7.条件和布尔操作符 */,
-				375312A72203008E00DA5EFD /* 7.错误处理 */,
-				375312A42202E53300DA5EFD /* 6.过滤操作符 */,
-				37174256220074C200BB1CAC /* 5.变换操作符 */,
-				3717424121FF0DD200BB1CAC /* 4.Subjects */,
-				37C46E4921F72765000151EA /* 3.Observer观察者 */,
-				378B7DFC21EF14B700F855F4 /* 2.Observable介绍、创建可观察序列 */,
+				3789B65024C595B10006BFA2 /* 8.Operator-操作符 */,
+				3789B65124C5BB800006BFA2 /* 7.Schedulers-调度器 */,
+				375312A72203008E00DA5EFD /* 6.Error Handling-错误处理 */,
+				3789B64D24C594D40006BFA2 /* 5.Disposable-可被清除的资源 */,
+				3717424121FF0DD200BB1CAC /* 4.Subjects-既是可被监听的序列也是观察者 */,
+				37C46E4921F72765000151EA /* 3.Observer-观察者 */,
+				378B7DFC21EF14B700F855F4 /* 2.Observable-可被监听的序列 */,
 				378B7DEB21EF09FE00F855F4 /* 1.响应式编程与传统式编程的比较 */,
 				378B7DDD21EF08FD00F855F4 /* Main.storyboard */,
 				378B7DE021EF08FE00F855F4 /* Assets.xcassets */,
@@ -164,27 +276,28 @@
 			path = "响应式编程";
 			sourceTree = "<group>";
 		};
-		378B7DFC21EF14B700F855F4 /* 2.Observable介绍、创建可观察序列 */ = {
+		378B7DFC21EF14B700F855F4 /* 2.Observable-可被监听的序列 */ = {
 			isa = PBXGroup;
 			children = (
 				378B7DFD21EF1F6100F855F4 /* README.md */,
 			);
-			path = "2.Observable介绍、创建可观察序列";
+			path = "2.Observable-可被监听的序列";
 			sourceTree = "<group>";
 		};
-		37C46E4921F72765000151EA /* 3.Observer观察者 */ = {
+		37C46E4921F72765000151EA /* 3.Observer-观察者 */ = {
 			isa = PBXGroup;
 			children = (
-				37C46E4A21F727BE000151EA /* Observer观察者.md */,
+				37C46E4A21F727BE000151EA /* README.md */,
 			);
-			path = "3.Observer观察者";
+			path = "3.Observer-观察者";
 			sourceTree = "<group>";
 		};
-		37E0C43F24A82F9C00056166 /* 7.条件和布尔操作符 */ = {
+		37E0C43F24A82F9C00056166 /* 条件和布尔操作符 */ = {
 			isa = PBXGroup;
 			children = (
+				3789B66B24C5D1120006BFA2 /* README.md */,
 			);
-			path = "7.条件和布尔操作符";
+			path = "条件和布尔操作符";
 			sourceTree = "<group>";
 		};
 		8E1B27AA4201EB9357E3873D /* Pods */ = {
@@ -264,10 +377,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3789B64F24C595380006BFA2 /* README.md in Resources */,
 				378B7DE421EF08FE00F855F4 /* LaunchScreen.storyboard in Resources */,
+				3789B66024C5D0D70006BFA2 /* README.md in Resources */,
 				378B7DE121EF08FE00F855F4 /* Assets.xcassets in Resources */,
+				3789B66624C5D0F20006BFA2 /* README.md in Resources */,
+				3789B65324C5C11F0006BFA2 /* README.md in Resources */,
+				3789B66C24C5D1120006BFA2 /* README.md in Resources */,
 				378B7DFB21EF10AB00F855F4 /* FunkyViewController2.xib in Resources */,
+				3789B66424C5D0E80006BFA2 /* README.md in Resources */,
 				378B7DF121EF0AA200F855F4 /* FunkyViewController1.xib in Resources */,
+				3789B65E24C5D0CE0006BFA2 /* README.md in Resources */,
+				3789B66824C5D0FB0006BFA2 /* README.md in Resources */,
+				3789B65624C5CCA20006BFA2 /* README.md in Resources */,
+				3789B66A24C5D1080006BFA2 /* README.md in Resources */,
+				3789B66224C5D0E00006BFA2 /* README.md in Resources */,
 				378B7DDF21EF08FD00F855F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
