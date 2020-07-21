@@ -29,7 +29,7 @@
 #### [Disposable-可被清除的资源](./RxSwiftPractice/5.Disposable-可被清除的资源)
 - Observable 的销毁（Dispose）
 
-#### [Error Handling-错误处理](./RxSwiftPractice/6.Error\ Handling-错误处理)
+#### [ErrorHandling-错误处理](./RxSwiftPractice/6.ErrorHandling-错误处理)
 - retry
 - retryWhen
 - catchError

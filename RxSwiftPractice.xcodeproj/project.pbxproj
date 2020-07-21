@@ -97,12 +97,12 @@
 			path = "过滤操作符";
 			sourceTree = "<group>";
 		};
-		375312A72203008E00DA5EFD /* 6.Error Handling-错误处理 */ = {
+		375312A72203008E00DA5EFD /* 6.ErrorHandling-错误处理 */ = {
 			isa = PBXGroup;
 			children = (
 				375312A8220300DA00DA5EFD /* README.md */,
 			);
-			path = "6.Error Handling-错误处理";
+			path = "6.ErrorHandling-错误处理";
 			sourceTree = "<group>";
 		};
 		3789B64D24C594D40006BFA2 /* 5.Disposable-可被清除的资源 */ = {
@@ -221,7 +221,7 @@
 				375312B12203D18B00DA5EFD /* LabelViewController.swift */,
 				3789B65024C595B10006BFA2 /* 8.Operator-操作符 */,
 				3789B65124C5BB800006BFA2 /* 7.Schedulers-调度器 */,
-				375312A72203008E00DA5EFD /* 6.Error Handling-错误处理 */,
+				375312A72203008E00DA5EFD /* 6.ErrorHandling-错误处理 */,
 				3789B64D24C594D40006BFA2 /* 5.Disposable-可被清除的资源 */,
 				3717424121FF0DD200BB1CAC /* 4.Subjects-既是可被监听的序列也是观察者 */,
 				37C46E4921F72765000151EA /* 3.Observer-观察者 */,
