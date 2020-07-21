@@ -5,35 +5,35 @@
 
 
 #### [变换 Observable](./变换操作符)
-- toArray
-- map
-- scan
-- flatMap
-- flatMapFirst
-- flatMapLatest
-- flatMapWithIndex
-- concatMap
 - buffer
 - window
+- map
+- flatMap
+- flatMapLatest
+- flatMapFirst
+- concatMap
+- scan
 - groupBy
+- toArray
 
 
 #### [过滤 Observable](过滤操作符)
-- ignoreElements
-- elementAt
 - filter
-- debounce
-- throttle
 - distinctUntilChanged
-- sample
-- skip
-- skipWhile
-- skipUntil
+- single
+- elementAt
+- ignoreElements
 - take
 - takeLast
 - takeWhile
 - takeUntil
-- single
+- skip
+- skipWhile
+- skipUntil
+- sample
+- debounce
+- throttle
+
 
 
 #### [联合 Observable](./联合操作符)
@@ -62,15 +62,12 @@
 #### [连接 Observable 操作符](./连接Observable操作符)
 - multicast
 - publish
-- connect
 - refCount
 - replay
-- share
 - shareReplay
-- shareReplayLatestWhileConnected
 
 
-#### About Time [Time操作符](./Time操作符)
+#### [Time操作符](./Time操作符)
 - delay
 - delaySubscription
 - defer

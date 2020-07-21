@@ -27,7 +27,7 @@
 
 
 #### 框架中的五种Subjects
-- 分别为：AsyncSubject、PublishSubject、BehaviorSubject、ReplaySubject、ControlProperty、Variable。他们之间既有各自的特点，也有相同之处
+- 分别为：AsyncSubject、PublishSubject、BehaviorSubject、ReplaySubject、ControlProperty、（Variable 废弃）。他们之间既有各自的特点，也有相同之处
     - 首先他们都是 Observable，他们的订阅者都能收到他们发出的新的 Event。
     - 直到 Subject 发出 .complete 或者 .error 的 Event 后，该 Subject 便终结了，同时它也就不会再发出 .next 事件。
     - 对于那些在 Subject 终结后再订阅他的订阅者，也能收到 subject 发出的一条 .complete 或 .error 的 event，告诉这个新的订阅者它已经终结了。

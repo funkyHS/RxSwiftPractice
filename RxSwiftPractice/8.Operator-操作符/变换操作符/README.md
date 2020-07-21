@@ -77,20 +77,18 @@ override func viewDidLoad() {
 - 而 flatMap 操作符会对源 Observable 的每一个元素应用一个转换方法，将他们转换成 Observables。 然后将这些 Observables 的元素合并之后再发送出来。即又将其 "拍扁"（降维）成一个 Observable 序列。
 - 这个操作符是非常有用的。比如当 Observable 的元素本生拥有其他的 Observable 时，我们可以将所有子 Observables 的元素发送出来。
 ```Swift
-    let disposeBag = DisposeBag()
-
     let subject1 = BehaviorSubject(value: "A")
     let subject2 = BehaviorSubject(value: "1")
 
-    let variable = Variable(subject1)
+    let behaviorRelay = BehaviorRelay(value: subject1)
 
-    variable.asObservable()
+    behaviorRelay.asObservable()
         .flatMap { $0 }
         .subscribe(onNext: { print($0) })
         .disposed(by: disposeBag)
 
     subject1.onNext("B")
-    variable.value = subject2
+    behaviorRelay.accept(subject2)
     subject2.onNext("2")
     subject1.onNext("C")
 
@@ -111,20 +109,17 @@ override func viewDidLoad() {
 
 - flatMapLatest 与 flatMap 的唯一区别是：flatMapLatest 只会接收最新的 value 事件。
 ```Swift
-    let disposeBag = DisposeBag()
-
     let subject1 = BehaviorSubject(value: "A")
     let subject2 = BehaviorSubject(value: "1")
-
-    let variable = Variable(subject1)
-
-    variable.asObservable()
+    
+    let behaviorRelay = BehaviorRelay(value: subject1)
+    behaviorRelay.asObservable()
         .flatMapLatest { $0 }
         .subscribe(onNext: { print($0) })
         .disposed(by: disposeBag)
-
+    
     subject1.onNext("B")
-    variable.value = subject2
+    behaviorRelay.accept(subject2)
     subject2.onNext("2")
     subject1.onNext("C")
     
@@ -144,20 +139,17 @@ override func viewDidLoad() {
 - flatMapFirst 与 flatMapLatest 正好相反：flatMapFirst 只会接收最初的 value 事件
 - 该操作符可以防止重复请求：比如点击一个按钮发送一个请求，当该请求完成前，该按钮点击都不应该继续发送请求。便可该使用 flatMapFirst 操作符
 ```Swift
-    let disposeBag = DisposeBag()
-
     let subject1 = BehaviorSubject(value: "A")
     let subject2 = BehaviorSubject(value: "1")
-
-    let variable = Variable(subject1)
-
-    variable.asObservable()
+    
+    let behaviorRelay = BehaviorRelay(value: subject1)
+    behaviorRelay.asObservable()
         .flatMapFirst { $0 }
         .subscribe(onNext: { print($0) })
         .disposed(by: disposeBag)
-
+        
     subject1.onNext("B")
-    variable.value = subject2
+    behaviorRelay.accept(subject2)
     subject2.onNext("2")
     subject1.onNext("C")
     
@@ -179,16 +171,15 @@ override func viewDidLoad() {
 
     let subject1 = BehaviorSubject(value: "A")
     let subject2 = BehaviorSubject(value: "1")
+    let behaviorRelay = BehaviorRelay(value: subject1)
 
-    let variable = Variable(subject1)
-
-    variable.asObservable()
+    behaviorRelay.asObservable()
         .concatMap { $0 }
         .subscribe(onNext: { print($0) })
         .disposed(by: disposeBag)
 
     subject1.onNext("B")
-    variable.value = subject2
+    behaviorRelay.accept(subject2)
     subject2.onNext("2")
     subject1.onNext("C")
     subject1.onCompleted() //只有前一个序列结束后，才能接收下一个序列
@@ -208,23 +199,37 @@ override func viewDidLoad() {
 
 - scan 就是先给一个初始化的数，然后不断的拿前一个结果和最新的值进行处理操作。
 ```Swift
-    let disposeBag = DisposeBag()
-
+        
     Observable.of(1, 2, 3, 4, 5)
-        .scan(0) { acum, elem in
-            acum + elem
+        .scan(-1) { (acum, elem) -> Int in
+            print("acum = \(acum), elem = \(elem)")
+            return acum + elem
         }
+        .debug("scan Debug", trimOutput: true)
         .subscribe(onNext: { print($0) })
         .disposed(by: disposeBag)
         
         
     /**
     运行结果如下：
-        1
-        3
-        6
-        10
-        15
+        scan Debug -> subscribed
+        acum = -1, elem = 1
+        scan Debug -> Event next(0)
+        0
+        acum = 0, elem = 2
+        scan Debug -> Event next(2)
+        2
+        acum = 2, elem = 3
+        scan Debug -> Event next(5)
+        5
+        acum = 5, elem = 4
+        scan Debug -> Event next(9)
+        9
+        acum = 9, elem = 5
+        scan Debug -> Event next(14)
+        14
+        scan Debug -> Event completed
+        scan Debug -> isDisposed
     */
 ```
 
@@ -266,5 +271,28 @@ Observable<Int>.of(0, 1, 2, 3, 4, 5)
         key：基数    event：next(5)
         key：基数    event：completed
         key：偶数    event：completed
+    */
+```
+
+
+#### toArray
+
+- 将 Observable 中的单个元素转换成 Array 的数据结构的 Observable 进行发送
+
+```Swift
+Observable.of(1, 2, 3, 4, 5, 6)
+        .toArray()
+        .debug("Test Debug", trimOutput: true) 
+        .subscribe(onNext: { print($0) })
+        .disposed(by: disposeBag)
+        
+        
+    /**
+    运行结果如下：
+        Test Debug -> subscribed
+        Test Debug -> Event next([1, 2, 3, 4, 5, 6])
+        [1, 2, 3, 4, 5, 6]
+        Test Debug -> Event completed
+        Test Debug -> isDisposed
     */
 ```

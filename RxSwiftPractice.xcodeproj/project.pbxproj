@@ -8,17 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		375312B22203D18B00DA5EFD /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375312B12203D18B00DA5EFD /* LabelViewController.swift */; };
-		3789B64F24C595380006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B64E24C595380006BFA2 /* README.md */; };
-		3789B65324C5C11F0006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B65224C5C11F0006BFA2 /* README.md */; };
-		3789B65624C5CCA20006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B65524C5CCA20006BFA2 /* README.md */; };
-		3789B65E24C5D0CE0006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B65D24C5D0CE0006BFA2 /* README.md */; };
-		3789B66024C5D0D70006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B65F24C5D0D70006BFA2 /* README.md */; };
-		3789B66224C5D0E00006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B66124C5D0E00006BFA2 /* README.md */; };
-		3789B66424C5D0E80006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B66324C5D0E80006BFA2 /* README.md */; };
-		3789B66624C5D0F20006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B66524C5D0F20006BFA2 /* README.md */; };
-		3789B66824C5D0FB0006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B66724C5D0FB0006BFA2 /* README.md */; };
-		3789B66A24C5D1080006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B66924C5D1080006BFA2 /* README.md */; };
-		3789B66C24C5D1120006BFA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3789B66B24C5D1120006BFA2 /* README.md */; };
 		378B7DDA21EF08FD00F855F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B7DD921EF08FD00F855F4 /* AppDelegate.swift */; };
 		378B7DDC21EF08FD00F855F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B7DDB21EF08FD00F855F4 /* ViewController.swift */; };
 		378B7DDF21EF08FD00F855F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378B7DDD21EF08FD00F855F4 /* Main.storyboard */; };
@@ -377,21 +366,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3789B64F24C595380006BFA2 /* README.md in Resources */,
 				378B7DE421EF08FE00F855F4 /* LaunchScreen.storyboard in Resources */,
-				3789B66024C5D0D70006BFA2 /* README.md in Resources */,
 				378B7DE121EF08FE00F855F4 /* Assets.xcassets in Resources */,
-				3789B66624C5D0F20006BFA2 /* README.md in Resources */,
-				3789B65324C5C11F0006BFA2 /* README.md in Resources */,
-				3789B66C24C5D1120006BFA2 /* README.md in Resources */,
 				378B7DFB21EF10AB00F855F4 /* FunkyViewController2.xib in Resources */,
-				3789B66424C5D0E80006BFA2 /* README.md in Resources */,
 				378B7DF121EF0AA200F855F4 /* FunkyViewController1.xib in Resources */,
-				3789B65E24C5D0CE0006BFA2 /* README.md in Resources */,
-				3789B66824C5D0FB0006BFA2 /* README.md in Resources */,
-				3789B65624C5CCA20006BFA2 /* README.md in Resources */,
-				3789B66A24C5D1080006BFA2 /* README.md in Resources */,
-				3789B66224C5D0E00006BFA2 /* README.md in Resources */,
 				378B7DDF21EF08FD00F855F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

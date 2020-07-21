@@ -244,39 +244,3 @@ public enum Event<Element> {
 ```
 
 
-
-
-
-### 监听事件的生命周期
-
-#### 1. doOn介绍
-- 可以使用 doOn 方法来监听事件的生命周期，它会在每一次事件发送前被调用
-- 同时它和 subscribe 一样，可以通过不同的 block 回调处理不同类型的 event
-```Swift
-    let observable = Observable.of("A", "B", "C")
-     
-    observable
-        .do(onNext: { element in
-            print("Intercepted Next：", element)
-        }, onError: { error in
-            print("Intercepted Error：", error)
-        }, onCompleted: {
-            print("Intercepted Completed")
-        }, onDispose: {
-            print("Intercepted Disposed")
-        })
-        .subscribe(onNext: { element in
-            print(element)
-        }, onError: { error in
-            print(error)
-        }, onCompleted: {
-            print("completed")
-        }, onDisposed: {
-            print("disposed")
-        })
-```
-
-
-
-
-
